@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>BoatDataService</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Boat_Record_Page</members>
+        <members>Friend_Ships</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>boatAddReviewForm</members>
+        <members>boatDetailTabs</members>
+        <members>boatMap</members>
+        <members>boatReviews</members>
+        <members>boatSearch</members>
+        <members>boatSearchForm</members>
+        <members>boatSearchResults</members>
+        <members>boatsNearMe</members>
+        <members>boatTile</members>
+        <members>similarBoats</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>boatMessageChannel</members>
+        <name>LightningMessageChannel</name>
+    </types>
+    <version>55.0</version>
+</Package>

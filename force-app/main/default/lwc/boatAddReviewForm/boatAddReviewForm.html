@@ -1,0 +1,34 @@
+<template>
+  <!-- lightning data service code -->
+  <!-- <lightning-record-edit-form> using boatReviewObject -->
+    <lightning-record-edit-form object-api-name={boatReviewObject} onsuccess={handleSuccess} onsubmit ={handleSubmit}>
+        <!-- <lightning-input-field field-name="Rating__c" class="boatReview" > </lightning-input-field> -->
+        <!-- <lightning-input-field field-name="Boat__c" class="boatReview" value={boatId}> </lightning-input-field> -->
+    <lightning-layout multiple-rows vertical-align="start">
+      <lightning-layout-item size="8" padding="horizontal-small">
+        <div class="slds-form-element">
+            <!-- review subject field code using nameField -->
+            <label class="slds-form-element__label">{labelSubject}</label>
+            <lightning-input-field field-name={nameField} class="boatReview" required="true" variant="label-hidden"> </lightning-input-field>
+        </div>
+      </lightning-layout-item>
+      <lightning-layout-item size="4" padding="horizontal-small">
+        <div class="slds-form-element">
+          <label class="slds-form-element__label" for="record-name">Rating</label>
+          <div class="slds-form-element__control">
+        <!-- add five star rating component -->
+        <c-five-star-rating read-only="false" value={rating} onratingchange={handleRatingChanged}></c-five-star-rating>
+          </div>
+        </div>
+      </lightning-layout-item>
+      <lightning-layout-item padding="horizontal-small">
+            <!-- review comment field code using commentField -->
+            <lightning-input-field field-name={commentField} class="boatReview" required="true"> </lightning-input-field>
+      </lightning-layout-item>
+    </lightning-layout>
+    <div class="slds-align_absolute-center" style="margin-top: 5px">
+           <!-- add submit button -->
+        <lightning-button type="submit" name="submit" label="Submit" icon-name="utility:save"></lightning-button>
+    </div>
+  </lightning-record-edit-form>
+</template>
